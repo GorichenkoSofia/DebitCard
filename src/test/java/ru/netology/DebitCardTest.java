@@ -26,7 +26,7 @@ public class DebitCardTest {
         options.addArguments("--headless");
         options.addArguments("--remote-allow-origin=*");
         driver = new ChromeDriver(options);
-        driver.get("http://0.0.0.0:999");
+        driver.get("http://localhost:9999");
 
 
     }
@@ -43,12 +43,12 @@ public class DebitCardTest {
         driver.findElement(By.cssSelector("[data-test-id-phone] input")).sendKeys("+79505005050");
         driver.findElement(By.cssSelector("[data-test-id-agreement]")).click();
         driver.findElement(By.cssSelector("button.button")).click();
-        var actalText = driver.findElement(By.cssSelector("[data-test-id=order-sucsess]")).getText().trim();
-        assertEquals("Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.", actalText);
+        var actualText = driver.findElement(By.cssSelector("[data-test-id=order-sucsess]")).getText().trim();
+        assertEquals("Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.", actualText);
 
     }
 
-    private void assertEquals(String s, String actalText) {
+    private void assertEquals(String s, String actualText) {
     }
 
 }
