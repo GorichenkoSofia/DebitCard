@@ -48,7 +48,7 @@ public class DebitCardTest {
 
     }
 
-    private void assertEquals(String s, String actualText) {
+    private static void assertEquals(String s, String actualText) {
     }
 
 }
